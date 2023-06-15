@@ -1,0 +1,26 @@
+<div class="container my-5 text-center">
+  <h1 class="mb-3">Guests</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let guest of guests">
+        <td>{{guest.firstName}}</td>
+        <td>{{guest.surname}}</td>
+        <td>{{guest.phone}}</td>
+        <td>{{guest.email}}</td>
+        <td>
+          <a class="btn btn-outline-light-pink" [routerLink]="['/guests','edit',guest.id]">View</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

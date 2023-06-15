@@ -1,0 +1,32 @@
+<div class="container my-5 mx-auto text-center">
+  <h1 class="mb-3">Edit Guests</h1>
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <form #form="ngForm" (ngSubmit)="updateGuest()" class="p-4 rounded" style="background-color: rgb(249, 202, 209);">
+      
+        <div class="mb-3">
+          <label for="id" class="form-label">Id</label>
+          <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="guestDetails.id">
+        </div>
+        <div class="mb-3">
+          <label for="firstName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="guestDetails.firstName">
+        </div>
+        <div class="mb-3">
+          <label for="surname" class="form-label">Surname</label>
+          <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="guestDetails.surname">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="guestDetails.phone">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="guestDetails.email">
+        </div>
+        <button type="submit" class="btn btn-info">Save</button>
+        <button type="button" class="btn btn-danger" (click)="deleteGuest(guestDetails.id)">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>
